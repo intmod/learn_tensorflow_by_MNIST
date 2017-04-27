@@ -3,18 +3,18 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 # data preprocessing
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-print("MNIST data ready for analysis!")  # get data ready
-x = tf.placeholder(tf.float32, [None, 784])  # placeholder for inputing imgs
+print("MNIST data ready for analysis!\n")  # get data ready
 
-# paras
+# paras and model
+x = tf.placeholder(tf.float32, [None, 784])  # placeholder for inputing imgs
 W = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
 y = tf.nn.softmax(tf.matmul(x, W) + b)
+y_ = tf.placeholder(tf.float32, [None, 10])  # will be loaded in sess.run()
 
 # loss func
-y_ = tf.placeholder(tf.float32, [None, 10])  # will be loaded in sess.run()
-# loss = -tf.reduce_sum(y_ * tf.log(y))  # cross func
-loss = (y_ - y) ** 2  # Euc dist sqr
+# loss = -tf.reduce_sum(y_ * tf.log(y))  # cross entropy
+loss = tf.reduce_sum(tf.square(y_ - y))  # Euc dist
 optimizer = tf.train.GradientDescentOptimizer(0.01)
 train_step = optimizer.minimize(loss)
 

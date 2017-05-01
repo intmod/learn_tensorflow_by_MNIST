@@ -14,12 +14,12 @@
 
 
 import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 tf.set_random_seed(0)  # tf&DL_without_a_phD
 
 
 # data
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+mnist = read_data_sets("MNIST_data/", one_hot=True)
 print("MNIST data ready for analysis!\n")  # get data ready
 batch_size = 100  # how many imgs in each batch?
 
@@ -66,7 +66,7 @@ init = tf.global_variables_initializer()  # note the version problem
 # evaluation
 # arg_max : the entry with the highest probability is our prediction
 if_prediction_correct = tf.equal(tf.arg_max(y, 1), tf.arg_max(y_, 1)) # T,F,T...
-accuracy = tf.reduce_mean(tf.cast(if_prediction_correct, "float"))    # 1,0,1...
+accuracy = tf.reduce_mean(tf.cast(if_prediction_correct, tf.float32)) # 1,0,1...
 
 
 with tf.Session() as sess:

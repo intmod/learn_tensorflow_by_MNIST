@@ -76,7 +76,7 @@ def tf_triple(x, name=None):
 
 
 # data
-mnist = read_data_sets("MNIST-data/", one_hot=True)
+mnist = read_data_sets("../MNIST-data/", one_hot=True)
 print("MNIST data ready for analysis!\n")  # get data ready
 batch_size = 100  # how many imgs in each batch?
 

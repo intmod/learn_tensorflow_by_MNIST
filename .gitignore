@@ -1,6 +1,9 @@
 # ignore the MNIST data
 MNIST_data/
+MNIST-data/
 data/
+
+*.gz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

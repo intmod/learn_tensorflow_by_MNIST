@@ -12,7 +12,7 @@
 # https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/
 # http://stackoverflow.com/questions/39921607/\
 #   tensorflow-how-to-make-a-custom-activation-function-with-only-python
-# wmji@github.com
+# mw58@github.com
 
 # this codes shows how to use user-defined activation function
 # define a good activation function
@@ -76,7 +76,7 @@ def tf_triple(x, name=None):
 
 
 # data
-mnist = read_data_sets("MNIST_data/", one_hot=True)
+mnist = read_data_sets("MNIST-data/", one_hot=True)
 print("MNIST data ready for analysis!\n")  # get data ready
 batch_size = 100  # how many imgs in each batch?
 

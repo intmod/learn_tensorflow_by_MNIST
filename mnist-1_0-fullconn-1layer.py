@@ -10,12 +10,12 @@
 
 # https://www.tensorflow.org/get_started/mnist/beginners
 # https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/
-# mw58@github.com
+#
 
 
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
-tf.set_random_seed(0)  # tf&DL_without_a_phD
+tf.set_random_seed(0)
 
 
 # data
@@ -25,7 +25,7 @@ batch_size = 100  # how many imgs in each batch?
 
 
 # model
-# neural network with 1 layer of 10 softmax neurons  - tf&DL_without_a_phD
+# neural network with 1 layer of 10 softmax neurons
 #
 # · · · · · · · · · ·       (input data, flattened pixels)   x [batch, 784]
 # \*/*\*/*\*/*\*/*\*/    -- fully connected layer (softmax)  W [784, 10]   b[10]

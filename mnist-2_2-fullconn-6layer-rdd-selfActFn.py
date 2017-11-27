@@ -12,7 +12,7 @@
 # https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/
 # http://stackoverflow.com/questions/39921607/\
 #   tensorflow-how-to-make-a-custom-activation-function-with-only-python
-# mw58@github.com
+#
 
 # this codes shows how to use user-defined activation function
 # define a good activation function
@@ -21,7 +21,7 @@
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 from tensorflow.python.framework import ops
-tf.set_random_seed(0)  # tf&DL_without_a_phD
+tf.set_random_seed(0)
 
 
 # self-def activation function:

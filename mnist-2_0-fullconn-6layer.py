@@ -10,12 +10,12 @@
 
 # https://www.tensorflow.org/get_started/mnist/beginners
 # https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/
-# mw58@github.com
+#
 
 
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
-tf.set_random_seed(0)  # tf&DL_without_a_phD
+tf.set_random_seed(0)
 
 
 # data
